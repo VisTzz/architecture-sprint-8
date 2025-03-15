@@ -1,6 +1,6 @@
 /postgres-keycloak-data
 2024__yandex-architecture-sso.code-workspace
-/backend/backend-sprint8/[Dd]ebug
-backend/backend-sprint8/.vs
-backend/backend-sprint8/obj
-backend/backend-sprint8/bin
+api/[Dd]ebug
+api/.vs
+api/obj
+api/bin
