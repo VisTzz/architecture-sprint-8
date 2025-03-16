@@ -50,7 +50,8 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: development
       CorsSettings__AllowedOrigins: http://frontend:3000
-      Keycloak__Authority: http://localhost:8080/realms/reports-realm
+      Keycloak__Authority: http://keycloak:8080/realms/reports-realm
       Keycloak__Audience: reports-frontend
       Keycloak__AllowedRole: prothetic_user
       Logging__LogLevel__Default: Debug
+      

@@ -41,7 +41,7 @@ public class TokenValidator
             ValidAudience = audience,
             IssuerSigningKeys = openIdConfig.SigningKeys,
             ValidateLifetime = true,
-            ValidateIssuer = true,
+            ValidateIssuer = false,
             ValidateAudience = false
         };
 
