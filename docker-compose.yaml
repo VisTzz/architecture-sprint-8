@@ -36,7 +36,22 @@ services:
     ports:
       - "3000:3000"
     environment:
-      REACT_APP_API_URL: http://localhost:8000
+      REACT_APP_API_URL: api/api/
       REACT_APP_KEYCLOAK_URL: http://localhost:8080
       REACT_APP_KEYCLOAK_REALM: reports-realm
       REACT_APP_KEYCLOAK_CLIENT_ID: reports-frontend
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "3001:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: development
+      CorsSettings__AllowedOrigins: http://frontend:3000
+      Keycloak__Authority: http://keycloak:8080/realms/reports-realm
+      Keycloak__Audience: reports-frontend
+      Keycloak__AllowedRole: prothetic_user
+      Logging__LogLevel__Default: Debug
+      
